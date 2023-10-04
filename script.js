@@ -57,6 +57,16 @@ function update()
     }
     if(yourCode.length == 3)
     {
+        if (yourCode < code)
+        {
+            winlossDisplay.innerHTML = "Try going a little higher!";
+
+        }
+        if (yourCode > code)
+        {
+            winlossDisplay.innerHTML = "Try going a little lower!";
+
+        }
         if (yourCode == code)
         {
             winlossDisplay.innerHTML = "Congradulations, you guessed the last code!";
