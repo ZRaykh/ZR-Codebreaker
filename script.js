@@ -3,6 +3,7 @@ function intitalize()
     inputDisplay = document.getElementById("guess");
     guessesDisplay = document.getElementById("clock");
     winlossDisplay = document.getElementById("win");
+    eventsDisplay = document.getElementById("events");
     reset();
     update();
 }
@@ -16,6 +17,7 @@ function reset()
     console.log(code)
     yourCode = "";
     turns = 7;
+    eventsDisplay.innerHTML = "New Game Started!";
 }
 
 function addOne()
@@ -41,6 +43,7 @@ function blank()
 {
     yourCode = "";
     console.log("Detected Clear!");
+    eventsDisplay.innerHTML = eventsDisplay.textContent + "\n Code was cleared." + yourCode;
     update();
 }
 
@@ -60,12 +63,12 @@ function update()
         if (yourCode < code)
         {
             winlossDisplay.innerHTML = "Try going a little higher!";
-
+            eventlog += eventsDisplay.textContent + "\n" + yourCode + " was entered, code was too low.\n";
         }
         if (yourCode > code)
         {
             winlossDisplay.innerHTML = "Try going a little lower!";
-
+            eventlog += eventsDisplay.textContent + "\n" + yourCode + " was entered, code was too high.\n";
         }
         if (yourCode == code)
         {
@@ -81,4 +84,5 @@ function update()
         yourCode = "";
     }
     guessesDisplay.innerHTML = "Turns remaining: " + turns;
+    eventsDisplay.innerHTML = eventlog;
 }
