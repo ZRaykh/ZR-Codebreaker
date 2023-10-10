@@ -17,7 +17,8 @@ function reset()
     console.log(code)
     yourCode = "";
     turns = 7;
-    eventsDisplay.innerHTML = "New Game Started!";
+    eventsDisplay.innerHTML = "<h2>Log of Events:<h2>" 
+    eventsDisplay.innerHTML+= "<p>New Game Started!<p>";
 }
 
 function addOne()
@@ -41,9 +42,9 @@ function addThree()
 
 function blank()
 {
+    eventsDisplay.innerHTML += "<p>Code was cleared. " + yourCode + "<p>";
     yourCode = "";
     console.log("Detected Clear!");
-    eventsDisplay.innerHTML = eventsDisplay.textContent + "\n Code was cleared." + yourCode;
     update();
 }
 
@@ -63,12 +64,12 @@ function update()
         if (yourCode < code)
         {
             winlossDisplay.innerHTML = "Try going a little higher!";
-            eventlog += eventsDisplay.textContent + "\n" + yourCode + " was entered, code was too low.\n";
+            eventsDisplay.innerHTML += "<p>" + yourCode + " was entered, code was too low.<p>";
         }
         if (yourCode > code)
         {
             winlossDisplay.innerHTML = "Try going a little lower!";
-            eventlog += eventsDisplay.textContent + "\n" + yourCode + " was entered, code was too high.\n";
+            eventsDisplay.innerHTML += "<p>" + yourCode + " was entered, code was too high.<p>";
         }
         if (yourCode == code)
         {
@@ -84,5 +85,4 @@ function update()
         yourCode = "";
     }
     guessesDisplay.innerHTML = "Turns remaining: " + turns;
-    eventsDisplay.innerHTML = eventlog;
 }

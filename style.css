@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .numberButton{
     color: black;
     background-color: lightgray;
@@ -7,5 +13,4 @@
 #clock{
     color: red;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
