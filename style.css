@@ -1,16 +1,58 @@
 body {
+    font-size: 100%; 
+    line-height: 1.5;
     margin: 0;
-    width: 100vw;
-    height: 100vh;
-}
+    padding: 0;
+  }
 
+.container {
+    width: 100%;
+    max-width: 100%; 
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+h1{
+    background-color: darkslategrey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    size: 200%;
+    font-size: 250%;
+}
+.win{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 300%;
+}
 .numberButton{
     color: black;
     background-color: lightgray;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 225%;
 }
-
+#win{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150%;
+}
+#guess{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 225%;
+}
 #clock{
     color: red;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 225%;
+
+}
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 200%;
+
+}
+#events{
+    background-color: darkslategrey;
+    border: 2% solid black;
+    color: white;
+    height: 1000px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100%;
 }

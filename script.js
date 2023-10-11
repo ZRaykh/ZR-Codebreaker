@@ -73,13 +73,13 @@ function update()
         }
         if (yourCode == code)
         {
-            winlossDisplay.innerHTML = "Congradulations, you guessed the last code!";
+            winlossDisplay.innerHTML = "Congradulations, you guessed the last code "+ code + "!";
             reset();
         }
         turns = turns - 1;
         if (turns < 1)
         {
-            winlossDisplay.innerHTML = "You failed to guess the last code! Maybe you'll do better this time!";
+            winlossDisplay.innerHTML = "You failed to guess the last code: " + code + "! Maybe you'll do better this time!";
             reset();
         }
         yourCode = "";
